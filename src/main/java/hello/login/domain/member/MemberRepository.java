@@ -13,7 +13,7 @@ public class MemberRepository {
     private static long sequence = 0L;
 
     public Member save(Member member) {
-        member.setId(++sequence);           // Id 를 Map 내의 Long 객체에 저장한다
+        member.setId(++sequence);            // Id 를 Map 내의 Long 객체에 저장한다
         log.info("save: member={}", member); // 로그를 출력한다
         store.put(member.getId(), member);   // put을 통해 Map 에 저장한다 Long : member.getId(), Member 객체에 memeber
         // member.getId() 가 저장된 member 이다.
