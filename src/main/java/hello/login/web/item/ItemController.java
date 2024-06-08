@@ -2,6 +2,7 @@ package hello.login.web.item;
 
 import hello.login.domain.item.Item;
 import hello.login.domain.item.ItemRepository;
+import hello.login.domain.member.MemberRepository;
 import hello.login.web.item.form.ItemSaveForm;
 import hello.login.web.item.form.ItemUpdateForm;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ItemController {
 
+    private final MemberRepository memberRepository;
     private final ItemRepository itemRepository;
 
     @GetMapping
@@ -102,5 +104,4 @@ public class ItemController {
         itemRepository.update(itemId, itemParam);
         return "redirect:/items/{itemId}";
     }
-
 }
