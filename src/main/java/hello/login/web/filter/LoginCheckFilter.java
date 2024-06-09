@@ -13,8 +13,8 @@ import java.io.IOException;
 @Slf4j
 public class LoginCheckFilter implements Filter {
 
-    // 로그인 안되었을 때에도 사용자가 접글 할 수 있는 url 정의
-    private static final String[] whitelist = {"/", "members/add", "/login", "/logout", "/css/*"};
+    // 로그인 안되었을 때에도 사용자가 접근 할 수 있는 url 정의
+    private static final String[] whitelist = {"/", "/members/add", "/login", "/logout", "/css/*"};
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
